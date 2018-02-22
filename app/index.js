@@ -1,4 +1,4 @@
 import React from 'react';
 
-import Navigator from './config/routes';
-export default () => <Navigator />;
+import { HomeStack } from './config/routes';
+export default () => <HomeStack />;

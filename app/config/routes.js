@@ -11,10 +11,10 @@ import ProfileTab from '../screens/ProfileTab';
 import SearchTab from '../screens/SearchTab';
 import HomeTab from '../screens/HomeTab';
 
-const HomeStack = StackNavigator(
+export const HomeStack = StackNavigator(
 	{
 		Home: {
-			screen: HomeTab,
+			screen: Home,
 			navigationOptions: {
 				headerLeft: <Icon name="ios-camera-outline" style={{ paddingLeft: 15 }} />,
 				title: 'Instagram',
@@ -24,28 +24,46 @@ const HomeStack = StackNavigator(
 	},
 	{}
 );
-const TabNavigation = TabNavigator(
+
+export const TabNavigation = TabNavigator(
 	{
 		HomeTab: {
-			screen: HomeStack,
+			screen: HomeTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="ios-home" style={{ color: tintColor }} />,
+			},
 		},
 		AddMediaTab: {
 			screen: AddMediaTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="ios-add-circle" style={{ color: tintColor }} />,
+			},
 		},
 		LikeTab: {
 			screen: LikeTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="ios-heart" style={{ color: tintColor }} />,
+			},
 		},
+
 		ProfileTab: {
 			screen: ProfileTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="person" style={{ color: tintColor }} />,
+			},
 		},
 		SearchTab: {
 			screen: SearchTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="ios-search" style={{ color: tintColor }} />,
+			},
 		},
 	},
+
 	{
-		tabBarPosition: 'bottom',
 		animationEnabled: true,
 		swipeEnabled: false,
+		tabBarPosition: 'bottom',
 		tabBarOptions: {
 			style: {
 				...Platform.select({
@@ -56,10 +74,8 @@ const TabNavigation = TabNavigator(
 			},
 			showIcon: true,
 			showLabel: false,
-			activeTintColor: '#fff',
+			activeTintColor: '#000',
 			inactiveTintColor: '#d1cece',
 		},
 	}
 );
-
-export default TabNavigation;
