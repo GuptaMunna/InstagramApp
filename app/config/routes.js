@@ -16,9 +16,7 @@ export const HomeStack = StackNavigator(
 		Home: {
 			screen: Home,
 			navigationOptions: {
-				headerLeft: <Icon name="ios-camera-outline" style={{ paddingLeft: 15 }} />,
-				title: 'Instagram',
-				headerRight: <Icon name="ios-send-outline" style={{ paddingRight: 15 }} />,
+				header: null,
 			},
 		},
 	},
@@ -27,6 +25,12 @@ export const HomeStack = StackNavigator(
 
 export const TabNavigation = TabNavigator(
 	{
+		ProfileTab: {
+			screen: ProfileTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="person" style={{ color: tintColor }} />,
+			},
+		},
 		HomeTab: {
 			screen: HomeTab,
 			navigationOptions: {
@@ -46,12 +50,6 @@ export const TabNavigation = TabNavigator(
 			},
 		},
 
-		ProfileTab: {
-			screen: ProfileTab,
-			navigationOptions: {
-				tabBarIcon: ({ tintColor }) => <Icon name="person" style={{ color: tintColor }} />,
-			},
-		},
 		SearchTab: {
 			screen: SearchTab,
 			navigationOptions: {

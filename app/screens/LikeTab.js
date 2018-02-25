@@ -1,20 +1,24 @@
 //import liraries
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+class LikeTab extends Component {
+	render() {
+		return (
+			<View style={style.home}>
+				<Text>Like tab</Text>
+			</View>
+		);
+	}
+}
 const style = StyleSheet.create({
 	home: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#2c3e50',
+		backgroundColor: 'white',
 	},
 });
-const LikeTab = () => (
-	<View style={style.home}>
-		<Text>Like tab</Text>
-	</View>
-);
 
 //make this component available to the app
 export default LikeTab;
