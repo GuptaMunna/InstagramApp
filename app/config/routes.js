@@ -25,18 +25,19 @@ export const HomeStack = StackNavigator(
 
 export const TabNavigation = TabNavigator(
 	{
-		ProfileTab: {
-			screen: ProfileTab,
-			navigationOptions: {
-				tabBarIcon: ({ tintColor }) => <Icon name="person" style={{ color: tintColor }} />,
-			},
-		},
 		HomeTab: {
 			screen: HomeTab,
 			navigationOptions: {
 				tabBarIcon: ({ tintColor }) => <Icon name="ios-home" style={{ color: tintColor }} />,
 			},
 		},
+		ProfileTab: {
+			screen: ProfileTab,
+			navigationOptions: {
+				tabBarIcon: ({ tintColor }) => <Icon name="person" style={{ color: tintColor }} />,
+			},
+		},
+
 		AddMediaTab: {
 			screen: AddMediaTab,
 			navigationOptions: {

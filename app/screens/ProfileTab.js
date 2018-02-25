@@ -60,7 +60,7 @@ class ProfileTab extends Component {
 		} else if (this.state.activeIndex === 1) {
 			return (
 				<View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-					{this.renderThumbnail(getRandomeData(CARD_COUNT))}
+					{this.renderThumbnail(getRandomeData(20))}
 				</View>
 			);
 		}
@@ -69,7 +69,7 @@ class ProfileTab extends Component {
 	render() {
 		return (
 			<Container style={style.home}>
-				<InstaHeader header="" leftButtonIcon="md-person-add" rightButtonIcon="back-in-time" />
+				<InstaHeader header="#sarapaul" leftButtonIcon="md-person-add" rightButtonIcon="back-in-time" />
 				<Content style={{ paddingTop: 5 }}>
 					<MyDetail />
 					<View style={{ marginLeft: 10, marginTop: 5 }}>
